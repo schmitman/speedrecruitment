@@ -1,1 +1,238 @@
-PLACEHOLDER_FOR_FULL_HTML
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Startup the Match · 15/12 · CABA</title>
+<meta name="description" content="Entrevistas cortas y cara a cara entre startups que contratan y gente de tecnología. Si los dos dicen que sí, es match. Organizan Bondy y StartupsArgentina.com.">
+<meta property="og:title" content="Startup the Match">
+<meta property="og:description" content="Anotate, entrevistate y dale match. Martes 15 de diciembre, Mirabilia 851, CABA.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%23E04000'/><path d='M9 17l5 5 9-12' stroke='white' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#FFF7EF;--ink:#120804;--body:#3A261C;--muted:#5A463B;--accent:#E04000;--accent-dk:#B33300;--orange:#FF7A1A;--card:#FFFFFF;
+--disp:'Bricolage Grotesque',system-ui,sans-serif;--txt:'DM Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--txt);font-size:17px;line-height:1.55}
+a{color:var(--accent)}a:hover{color:var(--accent-dk)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+h1,h2,h3,.logo{font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-height:.98}
+.logo{font-size:22px;letter-spacing:-.02em}.logo span{color:var(--accent)}
+.by{font-size:12px;font-weight:500;color:var(--muted);margin-top:3px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+nav .links a{color:var(--muted);text-decoration:none;font-weight:500;font-size:15px;margin-left:18px}
+nav .links a:hover{color:var(--ink)}
+
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;padding:40px 0 80px}
+.hero h1{font-size:clamp(3rem,8.5vw,6.2rem)}
+.pill{display:inline-block;background:var(--accent);color:#fff;padding:.04em .3em .14em;border-radius:.28em;transform:rotate(-3deg);margin-top:.12em}
+.lead{font-size:20px;color:var(--body);max-width:30em;margin:28px 0 22px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.facts span{background:var(--card);border-radius:999px;padding:7px 14px;font-weight:500;font-size:15px}
+.stats{display:flex;gap:16px;margin:24px 0 28px;flex-wrap:wrap}
+.stat{background:var(--card);border-radius:18px;padding:16px 20px;min-width:140px}
+.stat strong{display:block;font-family:var(--disp);font-size:32px;font-weight:800;letter-spacing:-.03em;color:var(--accent);line-height:1}
+.stat span{font-size:14px;color:var(--muted);font-weight:500}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;font-weight:700;font-size:16px;text-decoration:none;padding:15px 24px;border-radius:16px}
+.btn.main{background:var(--ink);color:#fff}.btn.main:hover{background:var(--accent);color:#fff}
+.btn.alt{background:var(--card);color:var(--ink)}.btn.alt:hover{color:var(--accent)}
+.btn.next{background:transparent;color:var(--ink);border:2px solid var(--ink)}.btn.next:hover{background:var(--ink);color:#fff}
+
+.pass{background:var(--ink);color:#fff;border-radius:28px;padding:24px;max-width:330px;justify-self:center;width:100%;transform:rotate(2.5deg);box-shadow:0 18px 40px -18px rgba(18,8,4,.55)}
+.pass .top{display:flex;justify-content:space-between;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--orange)}
+.pass .live::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--orange);margin-right:6px;vertical-align:1px}
+.pass h3{font-size:24px;margin:16px 0 18px}
+.qr{background:#fff;border-radius:18px;padding:16px}
+.qr svg{display:block;width:100%;height:auto}
+.pass .code{text-align:center;font-family:var(--disp);font-weight:600;letter-spacing:.3em;margin-top:14px;font-size:18px}
+@media (prefers-reduced-motion:no-preference){.pass{animation:in .7s cubic-bezier(.2,.8,.2,1) both}@keyframes in{from{opacity:0;transform:rotate(9deg) translateY(24px)}}}
+
+section{padding:72px 0;border-top:1.5px solid rgba(18,8,4,.08)}
+section h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:28px;max-width:16ch}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;list-style:none;counter-reset:s}
+.steps li{background:var(--card);border-radius:20px;padding:20px;counter-increment:s}
+.steps li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;background:var(--ink);color:var(--orange);font-family:var(--disp);font-weight:800;font-size:19px;margin-bottom:14px}
+.steps li:last-child{background:var(--accent);color:#fff}
+.steps li:last-child::before{background:#fff;color:var(--accent)}
+.steps h3{font-size:21px;margin-bottom:6px;letter-spacing:-.02em}
+.steps p{font-size:15px;color:var(--body)}.steps li:last-child p{color:#fff}
+.note{margin-top:26px;max-width:40em;color:var(--body)}
+
+.sides{display:grid;grid-template-columns:1fr 1fr;gap:16px;border:0;padding-top:0}
+.side{border-radius:28px;padding:36px}
+.side.cand{background:var(--card)}
+.side.emp{background:var(--ink);color:#fff}
+.side h2{font-size:clamp(2rem,4vw,2.9rem);margin-bottom:16px}
+.side p{margin-bottom:26px;max-width:28em}
+.side.emp p{color:#F3E6DA}
+.side.emp .btn.main{background:var(--accent)}.side.emp .btn.main:hover{background:var(--orange);color:var(--ink)}
+.side small{display:block;margin-top:14px;font-size:14px;color:var(--muted)}
+.side.emp small{color:#C9B6A8}.side.emp small a{color:#fff}
+
+.profiles{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+.chart-box{background:var(--card);border-radius:24px;padding:28px;text-align:center}
+.chart-box h3{font-size:22px;margin-bottom:16px;letter-spacing:-.02em}
+.chart-box canvas{max-width:280px;margin:0 auto}
+
+.partners{text-align:center}
+.partners h2{margin-left:auto;margin-right:auto;max-width:none}
+.partner{display:inline-flex;flex-direction:column;align-items:center;gap:10px;background:var(--card);border-radius:24px;padding:32px 48px;margin-top:8px}
+.partner-logo{font-family:var(--disp);font-weight:800;font-size:28px;letter-spacing:-.02em;color:var(--ink);line-height:1.1}
+.partner-logo span{display:block;font-size:22px;margin-top:2px}
+.partner .label{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.partner img{height:72px;width:auto;display:block}
+
+footer{padding:36px 0 52px;font-size:15px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:var(--ink);font-weight:700}
+
+@media (max-width:880px){.steps{grid-template-columns:1fr 1fr}.profiles{grid-template-columns:1fr}}
+@media (max-width:720px){
+.hero{grid-template-columns:1fr;padding-top:16px;gap:40px}
+.pass{max-width:260px;justify-self:start;margin-left:8px}
+.sides{grid-template-columns:1fr}.side{padding:28px}
+nav .links{display:none}
+.steps{grid-template-columns:1fr}
+.stats{justify-content:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <div><div class="logo">Startup <span>the Match</span></div><div class="by">Bondy × Startups Argentina</div></div>
+  <div class="links"><a href="#como">Cómo funciona</a><a href="#candidatos">Candidatos</a><a href="#empresas">Empresas</a></div>
+</nav>
+
+<header class="hero">
+  <div>
+    <h1>Anotate.<br>Entrevistate.<br><span class="pill">¡Dale match!</span></h1>
+    <p class="lead">Una tarde de entrevistas cortas, cara a cara, entre startups que están contratando y gente de tecnología. Si después de charlar los dos dicen que sí, es match y arranca el proceso.</p>
+    <div class="stats">
+      <div class="stat"><strong>450+</strong><span>pre-inscriptos</span></div>
+    </div>
+    <div class="facts"><span>Martes 15 de diciembre</span><span>Mirabilia 851, CABA</span></div>
+    <div class="btns">
+      <a class="btn main" href="https://luma.com/ub3r7odg" target="_blank" rel="noopener">Quiero participar</a>
+      <a class="btn alt" href="#empresas">Soy una empresa</a>
+      <a class="btn next" href="mailto:hello@wearebondy.com?subject=Quiero%20anotarme%20en%20el%20pr%C3%B3ximo%20Speed%20Recruiting">En este no voy a estar, pero quiero el próximo</a>
+    </div>
+  </div>
+  <div class="pass" aria-hidden="true">
+    <div class="top"><span>TU PASE</span><span class="live">EN VIVO</span></div>
+    <h3>Hola, Martina. Este es tu pase.</h3>
+    <div class="qr"><svg viewBox="0 0 21 21" shape-rendering="crispEdges" id="qr"></svg></div>
+    <div class="code">K7P4QX</div>
+  </div>
+</header>
+
+<section id="como">
+  <h2>Así funciona</h2>
+  <ol class="steps">
+    <li><h3>Hacé check-in</h3><p>En la entrada mostrás tu QR, el mismo que te llega por mail, y tu DNI.</p></li>
+    <li><h3>Anotate</h3><p>Mirás roles, rango, condiciones y beneficios de cada empresa, y marcás con cuáles querés entrevistarte.</p></li>
+    <li><h3>Entrevistate</h3><p>Te acercás a la mesa y hacés la fila. Escanean tu QR y arranca la charla.</p></li>
+    <li><h3>Dale match</h3><p>Después de cada entrevista decidís si querés avanzar. Si los dos dicen que sí, se pasan el contacto.</p></li>
+  </ol>
+  <p class="note">No hace falta decidir en el momento: tenés hasta el 22/12 para pensarlo o cambiar de opinión, y nadie ve la respuesta del otro salvo que haya match. El 23/12 te llega el feedback de las empresas que te entrevistaron, sin su nombre, para que sepas qué ajustar.</p>
+</section>
+
+<section id="perfiles">
+  <h2>Quiénes se anotaron</h2>
+  <p class="note" style="margin-bottom:28px">Distribución aproximada de los pre-inscriptos (más de 450 personas de tecnología).</p>
+  <div class="profiles">
+    <div class="chart-box">
+      <h3>Áreas</h3>
+      <canvas id="chartAreas"></canvas>
+    </div>
+    <div class="chart-box">
+      <h3>Años de experiencia</h3>
+      <canvas id="chartExp"></canvas>
+    </div>
+  </div>
+</section>
+
+<section class="sides">
+  <div class="side cand" id="candidatos">
+    <h2>Si buscás trabajo</h2>
+    <p>Trabajás en tecnología y querés cambiar. En vez de mandar CVs y esperar una respuesta que no llega, elegís con quién hablar y en una tarde sabés dónde vale la pena seguir.</p>
+    <a class="btn main" href="https://luma.com/ub3r7odg" target="_blank" rel="noopener">Inscribirme en Luma</a>
+    <small>El evento es el martes 15 de diciembre en Mirabilia 851. Las personas que van están efectivamente buscando trabajo.</small>
+  </div>
+  <div class="side emp" id="empresas">
+    <h2>Si estás contratando</h2>
+    <p>Tenés una mesa y una fila de gente que eligió hablar con tu equipo. Al terminar te llevás un shortlist ordenado por interés, y el contacto de cada persona aparece cuando el interés es mutuo.</p>
+    <a class="btn main" href="mailto:hello@wearebondy.com?subject=Startup%20the%20Match%3A%20quiero%20una%20mesa">Quiero una mesa</a>
+    <small>Escribinos a <a href="mailto:hello@wearebondy.com">hello@wearebondy.com</a> y te contamos las condiciones.</small>
+  </div>
+</section>
+
+<section class="partners">
+  <h2>Partner asociado</h2>
+  <div class="partner">
+    <div class="partner-logo">Mirabilia<br><span>★ 851</span></div>
+    <div class="label">Fitz Roy 851 · CABA</div>
+  </div>
+</section>
+
+<section class="partners">
+  <h2>Media partners</h2>
+  <div class="partner">
+    <div class="partner-logo" style="display:flex;align-items:center;gap:12px;font-size:32px;">
+      <span style="display:inline-block;width:28px;height:28px;background:#FF2A2A;border-radius:50%;"></span>
+      BOTR
+    </div>
+    <div class="label"><a href="https://www.buildersofftherecord.com/" target="_blank" rel="noopener">Builders OFF The Record</a></div>
+  </div>
+</section>
+
+<section class="partners">
+  <h2>Sponsors de apoyo</h2>
+  <div class="partner">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAx" alt="Consolidar" style="height:100px;width:auto;background:#000;border-radius:16px;padding:12px;">
+    <div class="label"><a href="https://www.consolid.ar/" target="_blank" rel="noopener">Consolidar</a></div>
+  </div>
+</section>
+
+<footer>
+  <span>Organizan <a href="https://wearebondy.com" target="_blank" rel="noopener">Bondy</a> y <a href="https://startupsargentina.com" target="_blank" rel="noopener">StartupsArgentina.com</a></span>
+  <span>Buenos Aires, 2026</span>
+</footer>
+</div>
+<script>
+/* QR decorativo */
+(function(){var s=document.getElementById('qr'),n=21,h='',r=7;function f(x,y){h+='<rect x="'+x+'" y="'+y+'" width="1" height="1" fill="#120804"/>'}
+function finder(x,y){for(var i=0;i<7;i++)for(var j=0;j<7;j++){var e=i==0||i==6||j==0||j==6,c=i>1&&i<5&&j>1&&j<5;if(e||c)f(x+i,y+j)}}
+finder(0,0);finder(14,0);finder(0,14);
+for(var x=0;x<n;x++)for(var y=0;y<n;y++){if((x<8&&y<8)||(x>12&&y<8)||(x<8&&y>12))continue;r=(r*9301+49297)%233280;if(r/233280>.52)f(x,y)}
+s.innerHTML=h})();
+
+/* Gráficos */
+const accent = '#E04000';
+const colors = ['#E04000','#FF7A1A','#120804','#5A463B','#FFB366','#3A261C'];
+
+new Chart(document.getElementById('chartAreas'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Tech / Eng', 'Producto', 'Diseño', 'Marketing', 'Otros'],
+    datasets: [{ data: [42, 22, 15, 12, 9], backgroundColor: colors, borderWidth: 0 }]
+  },
+  options: { plugins: { legend: { position: 'bottom', labels: { font: { size: 13 }, padding: 16 } } }, cutout: '62%' }
+});
+
+new Chart(document.getElementById('chartExp'), {
+  type: 'doughnut',
+  data: {
+    labels: ['0-2 años', '3-5 años', '6-10 años', '10+ años'],
+    datasets: [{ data: [28, 35, 25, 12], backgroundColor: colors, borderWidth: 0 }]
+  },
+  options: { plugins: { legend: { position: 'bottom', labels: { font: { size: 13 }, padding: 16 } } }, cutout: '62%' }
+});
+</script>
+</body>
+</html>
