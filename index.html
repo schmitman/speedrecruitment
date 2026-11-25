@@ -33,6 +33,10 @@ nav .links a:hover{color:var(--ink)}
 .lead{font-size:20px;color:var(--body);max-width:30em;margin:28px 0 22px}
 .facts{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
 .facts span{background:var(--card);border-radius:999px;padding:7px 14px;font-weight:500;font-size:15px}
+.stats{display:flex;gap:16px;margin:24px 0 28px;flex-wrap:wrap}
+.stat{background:var(--card);border-radius:18px;padding:16px 20px;min-width:140px}
+.stat strong{display:block;font-family:var(--disp);font-size:32px;font-weight:800;letter-spacing:-.03em;color:var(--accent);line-height:1}
+.stat span{font-size:14px;color:var(--muted);font-weight:500}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-block;font-weight:700;font-size:16px;text-decoration:none;padding:15px 24px;border-radius:16px}
 .btn.main{background:var(--ink);color:#fff}.btn.main:hover{background:var(--accent);color:#fff}
@@ -71,6 +75,12 @@ section h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:28px;max-width:16ch}
 .side small{display:block;margin-top:14px;font-size:14px;color:var(--muted)}
 .side.emp small{color:#C9B6A8}.side.emp small a{color:#fff}
 
+.partners{text-align:center}
+.partners h2{margin-left:auto;margin-right:auto;max-width:none}
+.partner{display:inline-flex;flex-direction:column;align-items:center;gap:12px;background:var(--card);border-radius:24px;padding:28px 40px;margin-top:8px}
+.partner svg{height:48px;width:auto}
+.partner .label{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+
 footer{padding:36px 0 52px;font-size:15px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 footer a{color:var(--ink);font-weight:700}
 
@@ -81,6 +91,7 @@ footer a{color:var(--ink);font-weight:700}
 .sides{grid-template-columns:1fr}.side{padding:28px}
 nav .links{display:none}
 .steps{grid-template-columns:1fr}
+.stats{justify-content:flex-start}
 }
 </style>
 </head>
@@ -95,6 +106,9 @@ nav .links{display:none}
   <div>
     <h1>Anotate.<br>Entrevistate.<br><span class="pill">¡Dale match!</span></h1>
     <p class="lead">Una tarde de entrevistas cortas, cara a cara, entre startups que están contratando y gente de tecnología. Si después de charlar los dos dicen que sí, es match y arranca el proceso.</p>
+    <div class="stats">
+      <div class="stat"><strong>450+</strong><span>pre-inscriptos</span></div>
+    </div>
     <div class="facts"><span>Martes 15 de diciembre</span><span>Mirabilia 851, CABA</span></div>
     <div class="btns">
       <a class="btn main" href="https://luma.com/ub3r7odg" target="_blank" rel="noopener">Quiero participar</a>
@@ -133,6 +147,18 @@ nav .links{display:none}
     <p>Tenés una mesa y una fila de gente que eligió hablar con tu equipo. Al terminar te llevás un shortlist ordenado por interés, y el contacto de cada persona aparece cuando el interés es mutuo.</p>
     <a class="btn main" href="mailto:hello@wearebondy.com?subject=Startup%20the%20Match%3A%20quiero%20una%20mesa">Quiero una mesa</a>
     <small>Escribinos a <a href="mailto:hello@wearebondy.com">hello@wearebondy.com</a> y te contamos las condiciones.</small>
+  </div>
+</section>
+
+<section class="partners">
+  <h2>Partner asociado</h2>
+  <div class="partner">
+    <svg viewBox="0 0 280 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mirabilia 851">
+      <text x="0" y="42" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-weight="800" font-size="36" fill="#120804" letter-spacing="-0.5">Mirabilia</text>
+      <text x="195" y="42" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-weight="800" font-size="36" fill="#120804">★</text>
+      <text x="220" y="42" font-family="'Bricolage Grotesque', system-ui, sans-serif" font-weight="800" font-size="36" fill="#120804">851</text>
+    </svg>
+    <div class="label">Mirabilia 851 · Fitz Roy 851</div>
   </div>
 </section>
 
